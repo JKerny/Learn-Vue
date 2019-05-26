@@ -9,10 +9,14 @@ var app = new Vue({
         details: ["80% Cotton", "20% polyester"],
         variants: [
             {
-                color: "green"
+                id: "1",
+                color: "blue",
+                variantImage: "./assets/images/vmSocks-blue-onWhite.jpg",
             },
             {
-                color: "blue"
+                id: "2",
+                color: "green",
+                variantImage:"./assets/images/vmSocks-green-onWhite.jpg"
             }
         ],
         cart: 0
@@ -20,9 +24,11 @@ var app = new Vue({
         methods: {
             addToCart: function () {
                 this.cart++;
+            },
+            updateProduct: function(variantImage){
+                this.image = variantImage
             }
 
         }
-
     
 })

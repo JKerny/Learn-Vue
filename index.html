@@ -16,13 +16,12 @@
             <p v-show="onSale">On Sale!</p>
             <ul>
                 <li v-for="detail in details">{{ detail }}</li>
-            </ul>
-            <ul>
-                <li v-for="variant in variants">{{ variant.color }}</li>
-            </ul>
+            </ul>            
+            <div v-for="variant in variants" :key="variant.id">
+                <p v-on:mouseover="updateProduct(variant.variantImage)">{{variant.color}}</p>           
+            </div>            
             <button v-on:click="addToCart">Add to Cart</button>
             <div class="cart"><p>({{ cart }})</p></div>
-
         </div>
        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
        <script src="main.js"></script> 
