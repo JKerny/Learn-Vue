@@ -7,6 +7,7 @@ var app = new Vue({
         inventory: 8,
         onSale: false,
         details: ["80% Cotton", "20% polyester"],
+        inStock:false,
         variants: [
             {
                 id: "1",
